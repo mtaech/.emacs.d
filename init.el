@@ -36,11 +36,13 @@
 	       magit
 	       helm
 	       undo-tree
-	       treemacs)))
+	       treemacs
+               window-numbering)))
   (dolist (pkg package-list)
     (eval `(use-package ,pkg))))
 
 
+(window-numbering-mode t)
 
 ;;kdb setting 快捷键设置
 (global-set-key (kbd "C-c l") 'org-store-link)
