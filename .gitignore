@@ -1,0 +1,13 @@
+/#init.el#
+/history
+/ido.last
+/network-security.data
+/places
+/.idea/
+/.cache/
+/backups/
+/eln-cache/
+/elpa/
+/server/
+/transient/
+/url/

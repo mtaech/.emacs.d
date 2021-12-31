@@ -36,13 +36,20 @@
 	       magit
 	       helm
 	       undo-tree
-	       treemacs
-               window-numbering)))
+           doom-themes
+            window-numbering
+	       treemacs)))
   (dolist (pkg package-list)
     (eval `(use-package ,pkg))))
 
 
 (window-numbering-mode t)
+;; 启动页图片更改
+(setq fancy-splash-image (expand-file-name "~/.emacs.d/asset/img/yay_evil.jpg"))
+
+(recentf-mode t)
+(setq recentf-max-menu-items 10)
+(load-theme 'doom-one t)
 
 ;;kdb setting 快捷键设置
 (global-set-key (kbd "C-c l") 'org-store-link)
