@@ -8,8 +8,8 @@
         ("i" "Ideas" entry (file "~/Agenda/Shower_Thought.org" "Shower_Thought")
          "* %U%?\n %a")))
 
-(setq org-roam-directory (file-truename "~/org-roam"))
-(org-roam-db-autosync-mode t)
+;;(setq org-roam-directory (file-truename "~/org-roam"))
+;;(org-roam-db-autosync-mode t)
 
 
 

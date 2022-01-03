@@ -4,8 +4,8 @@
 
 ;;读取配置文件
 (add-to-list 'load-path "~/.emacs.d/lisp")
-(require 'init-org)
 (require 'init-package)
+(require 'init-org)
 (require 'meow)
 (custom-set-faces
  '(default ((t (:family "Sarasa Mono SC" :foundry "outline"
