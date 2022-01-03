@@ -6,12 +6,13 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (require 'init-org)
 (require 'init-package)
-
+(require 'meow)
 (custom-set-faces
  '(default ((t (:family "Sarasa Mono SC" :foundry "outline"
                         :slant normal :weight normal
                         :height 120 :width normal)))))
 
+(global-display-line-numbers-mode t)
 ;;window-numbering on
 (window-numbering-mode t)
 ;;evil-mode on
@@ -20,6 +21,8 @@
 (load-theme 'doom-one t)
 ;;set undo-tree global
 (global-undo-tree-mode)
+;;enable company mode
+(add-hook 'after-init-hook 'global-company-mode)
 ;; 启动页图片更改
 (setq dashboard-startup-banner "~/.emacs.d/asset/img/yay_evil.png")
 ;;默认全屏
