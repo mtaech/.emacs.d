@@ -8,7 +8,6 @@
 (unless (package-installed-p 'use-package)
   ;; 更新本地缓存
   (package-refresh-contents)
-  ;; 之后安装它。use-package 应该是你配置中唯一一个需要这样安装的包。
   (package-install 'use-package))
 
 ;;使用use-package软件包
@@ -17,25 +16,18 @@
 ;; 让 use-package 永远按需安装软件包
 (setq use-package-always-ensure t)
 
-(let ((package-list '(
-	       better-defaults
-	       magit
-	       helm
-	       undo-tree
-	       treemacs
-               yaml-mode
-               evil
-               doom-themes
-               window-numbering
-	       treemacs
-               org-roam
-               )))
-  (dolist (pkg package-list)
-    (eval `(use-package ,pkg))))
+(use-package better-defaults)
+(use-package magit)
+(use-package helm)
+(use-package undo-tree)
+(use-package treemacs)
+(use-package yaml-mode)
+(use-package evil)
+(use-package doom-themes)
+(use-package window-numbering)
+(use-package org-roam)
 (use-package dashboard
-  :ensure t
-  :config
-  (dashboard-setup-startup-hook))
+  :config (dashboard-setup-startup-hook))
 
 
 
