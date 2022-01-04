@@ -25,6 +25,7 @@
 (use-package evil)
 (use-package doom-themes)
 (use-package window-numbering)
+(use-package org)
 (use-package org-roam)
 (use-package dashboard
   :config (dashboard-setup-startup-hook))

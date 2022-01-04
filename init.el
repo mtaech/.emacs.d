@@ -25,6 +25,8 @@
 (add-hook 'after-init-hook 'global-company-mode)
 ;; 启动页图片更改
 (setq dashboard-startup-banner "~/.emacs.d/asset/img/yay_evil.png")
+;;启动页内容居中
+(setq dashboard-center-content t)
 ;;默认全屏
 (add-hook 'emacs-startup-hook 'toggle-frame-maximized)
 ;;kdb setting 快捷键设置
