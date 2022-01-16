@@ -6,7 +6,7 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (require 'init-package)
 (require 'init-org)
-(require 'meow)
+
 (custom-set-faces
  '(default ((t (:family "Sarasa Mono SC" :foundry "outline"
                         :slant normal :weight normal
