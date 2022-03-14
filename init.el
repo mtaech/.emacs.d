@@ -6,9 +6,10 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (require 'init-package)
 (require 'init-org)
+(require 'init-config)
 
 (custom-set-faces
- '(default ((t (:family "Sarasa Mono SC" :foundry "outline"
+ '(default ((t (:family "LXGW WenKai Mono" :foundry "outline"
                         :slant normal :weight normal
                         :height 120 :width normal)))))
 
@@ -29,6 +30,7 @@
 (setq dashboard-center-content t)
 ;;默认全屏
 (add-hook 'emacs-startup-hook 'toggle-frame-maximized)
+(pyim-basedict-enable)
 ;;kdb setting 快捷键设置
 (global-set-key (kbd "C-c l") 'org-store-link)
 (global-set-key (kbd "C-c a") 'org-agenda)

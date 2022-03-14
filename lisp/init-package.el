@@ -30,7 +30,12 @@
 (use-package dashboard
   :config (dashboard-setup-startup-hook))
 (use-package company)
-
+(use-package org-modern)
+(use-package pyim
+  :custom
+  (default-input-method "pyim")
+  (pyim-default-scheme 'quanpin))
+(use-package pyim-basedict)
 
 
 (provide 'init-package)
