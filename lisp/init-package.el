@@ -1,8 +1,13 @@
 ;;指定国内软件源
-(setq package-archives '(("gnu" . "http://mirrors.ustc.edu.cn/elpa/gnu/")
-                         ("melpa" . "http://mirrors.ustc.edu.cn/elpa/melpa/")
-                         ("melpa-stable" . "http://mirrors.ustc.edu.cn/elpa/melpa-stable/")
-                        ("org" . "http://mirrors.ustc.edu.cn/elpa/org/")))
+(setq package-archives '(("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+                         ("melpa-stable" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/stable-melpa/")
+                        ("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
+
+
+;;初始化包管理器
+(package-initialize)
+(require 'package)
 
 ;;安装use-package
 (unless (package-installed-p 'use-package)

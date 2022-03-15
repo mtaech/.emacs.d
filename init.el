@@ -1,7 +1,3 @@
-;;初始化包管理器
-(require 'package)
-(package-initialize)
-
 ;;读取配置文件
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (require 'init-package)
