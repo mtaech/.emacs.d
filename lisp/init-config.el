@@ -45,19 +45,21 @@
 (add-hook 'org-mode-hook #'org-modern-mode)
 (add-hook 'org-agenda-finalize-hook #'org-modern-agenda)
 
-;; utf-8 everywhere
-(set-charset-priority 'unicode)
-(prefer-coding-system 'utf-8-unix)
-(modify-coding-system-alist 'process "*" 'utf-8-unix)
-(setq-default buffer-file-coding-system 'utf-8-unix)
-(set-buffer-file-coding-system 'utf-8-unix)
-(set-file-name-coding-system 'utf-8-unix)
-(set-default-coding-systems 'utf-8-unix)
-(set-keyboard-coding-system 'utf-8-unix)
-(set-terminal-coding-system 'utf-8-unix)
-(set-language-environment "UTF-8")
-(setq locale-coding-system 'utf-8-unix)
-(setq default-process-coding-system '(utf-8-unix . utf-8-unix))
+;; ;; utf-8 everywhere
+;; (set-charset-priority 'unicode)
+;; (prefer-coding-system 'utf-8-unix)
+;; (modify-coding-system-alist 'process "*" 'utf-8-unix)
+;; (setq-default buffer-file-coding-system 'utf-8-unix)
+;; (set-buffer-file-coding-system 'utf-8-unix)
+;; (set-file-name-coding-system 'utf-8-unix)
+;; (set-default-coding-systems 'utf-8-unix)
+;; (set-keyboard-coding-system 'utf-8-unix)
+;; (set-terminal-coding-system 'utf-8-unix)
+;; (set-language-environment "UTF-8")
+;; (setq locale-coding-system 'utf-8-unix)
+;; (setq default-process-coding-system '(utf-8-unix . utf-8-unix))
+
+
 
 
 (provide 'init-config)
