@@ -7,7 +7,7 @@
 (custom-set-faces
  '(default ((t (:family "LXGW WenKai Mono" :foundry "outline"
                         :slant normal :weight normal
-                        :height 120 :width normal)))))
+                        :height 140 :width normal)))))
 
 (global-display-line-numbers-mode t)
 ;;window-numbering on
@@ -15,7 +15,7 @@
 ;;evil-mode on
 (evil-mode 1)
 ;;set gobal theme
-(load-theme 'doom-one t)
+(load-theme 'solarized-dark t)
 ;;set undo-tree global
 (global-undo-tree-mode)
 ;;enable company mode
