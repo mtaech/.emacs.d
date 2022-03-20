@@ -41,6 +41,7 @@
   (default-input-method "pyim")
   (pyim-default-scheme 'quanpin))
 (use-package pyim-basedict)
+(use-package solarized-theme)
 
 
 (provide 'init-package)
