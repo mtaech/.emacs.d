@@ -1,3 +1,6 @@
+;;初始化包管理器
+(package-initialize)
+
 ;;指定国内软件源
 (setq package-archives '(("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
                          ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
@@ -5,14 +8,11 @@
                         ("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
 
 
-;;初始化包管理器
-(package-initialize)
+
 (require 'package)
 
 ;;安装use-package
 (unless (package-installed-p 'use-package)
-  ;; 更新本地缓存
-  (package-refresh-contents)
   (package-install 'use-package))
 
 ;;使用use-package软件包
@@ -27,13 +27,13 @@
 (use-package undo-tree)
 (use-package treemacs)
 (use-package yaml-mode)
-(use-package evil)
+;;(use-package evil)
 (use-package doom-themes)
 (use-package window-numbering)
 (use-package org)
 (use-package org-roam)
 (use-package dashboard
-  :config (dashboard-setup-startup-hook))
+:config (dashboard-setup-startup-hook))
 (use-package company)
 (use-package org-modern)
 (use-package pyim
