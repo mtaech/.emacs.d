@@ -12,8 +12,6 @@
 (global-display-line-numbers-mode t)
 ;;window-numbering on
 (window-numbering-mode t)
-;;evil-mode on
-(evil-mode 1)
 ;;set gobal theme
 (load-theme 'solarized-dark t)
 ;;set undo-tree global

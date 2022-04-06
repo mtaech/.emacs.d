@@ -27,8 +27,6 @@
 (use-package undo-tree)
 (use-package treemacs)
 (use-package yaml-mode)
-;;(use-package evil)
-(use-package doom-themes)
 (use-package window-numbering)
 (use-package org)
 (use-package org-roam)
