@@ -1,7 +1,7 @@
 
 ;; Choose some fonts
-(set-face-attribute 'default nil :family "LXGW WenKai Mono")
-(set-face-attribute 'variable-pitch nil :family "LXGW Wenkai Mono")
+(set-face-attribute 'default nil :family "Sarasa Term SC Nerd")
+(set-face-attribute 'variable-pitch nil :family "Sarasa Term SC Nerd")
 
 (setq
  ;; Edit settings

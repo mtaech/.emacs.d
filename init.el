@@ -1,11 +1,11 @@
 ;;读取配置文件
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (require 'init-package)
-(require 'init-org)
+;;(require 'init-org)
 (require 'init-config)
 
 (custom-set-faces
- '(default ((t (:family "LXGW WenKai Mono" :foundry "outline"
+ '(default ((t (:family "Sarasa Term SC Nerd" :foundry "outline"
                         :slant normal :weight normal
                         :height 140 :width normal)))))
 
