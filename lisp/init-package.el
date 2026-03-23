@@ -146,7 +146,12 @@
 ;; ===== 主题和外观 =====
 
 ;; Gruvbox 主题
+(use-package autothemer
+  :ensure t)
+
 (use-package gruvbox-theme
+  :ensure t
+  :after autothemer
   :demand t
   :config
   (load-theme 'gruvbox t))
@@ -154,18 +159,25 @@
 ;; Dashboard: 启动页面
 (use-package dashboard
   :demand t
-  :init
-  (dashboard-setup-startup-hook)
+  :after gruvbox-theme  ; 确保主题先加载
   :custom
   (dashboard-startup-banner (expand-file-name "asset/img/yay_evil.png"
                                                user-emacs-directory))
   (dashboard-center-content t)
   (dashboard-show-shortcuts nil)
-  (dashboard-items '((recents  . 10)
-                     (bookmarks . 5)
-                     (projects . 5)))
-  ;; 支持 Evil 模式的 dashboard 导航
+  ;; 显示 agenda 和任务
+  (dashboard-items '((agenda . 5)
+                     (recents . 8)
+                     (projects . 5)
+                     (bookmarks . 3)))
+  ;; Agenda 设置
+  (dashboard-agenda-sort-strategy '(time-up priority-down))
+  (dashboard-agenda-prefix-format "%-12:c %s ")
+  :init
+  ;; 在包加载前设置启动钩子
+  (dashboard-setup-startup-hook)
   :config
+  ;; 支持 Evil 模式的 dashboard 导航
   (when (bound-and-true-p evil-mode)
     (evil-define-key 'normal dashboard-mode-map
       (kbd "j") 'dashboard-next-line
@@ -174,6 +186,7 @@
       (kbd "f") 'dashboard-jump-to-bookmarks
       (kbd "r") 'dashboard-jump-to-recents
       (kbd "p") 'dashboard-jump-to-projects
+      (kbd "a") 'dashboard-jump-to-agenda
       (kbd "q") 'quit-window)))
 
 ;; ===== 输入法 =====
@@ -199,6 +212,15 @@
 ;; ===== 更好的默认设置 =====
 
 (use-package better-defaults)
+
+;; ===== Org 增强包 =====
+
+;; 更好的 Agenda 分组
+(use-package org-super-agenda)
+
+;; Org Roam - 笔记网络
+(use-package org-roam
+  :after org)
 
 (provide 'init-package)
 ;;; init-package.el ends here

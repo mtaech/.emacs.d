@@ -175,6 +175,14 @@
     "ot" '(treemacs :which-key "treemacs")
     "oe" '(open-init-file :which-key "init.el")
 
+    ;; Org 模式
+    "O" '(:ignore t :which-key "org")
+    "Oa" '(org-agenda :which-key "agenda")
+    "Oc" '(org-capture :which-key "capture")
+    "Ot" '(org-today-agenda :which-key "today")
+    "Of" '(org-roam-node-find :which-key "find note")
+    "Oi" '(org-roam-node-insert :which-key "insert note")
+
     ;; 退出
     "q" '(:ignore t :which-key "quit")
     "qq" '(save-buffers-kill-terminal :which-key "quit")

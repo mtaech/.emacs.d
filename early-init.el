@@ -15,8 +15,9 @@
 (setq package-check-signature nil)
 
 ;; 抑制字节编译警告
-(setq byte-compile-warnings '(not obsolete))
+(setq byte-compile-warnings nil)
 (setq native-comp-async-report-warnings-errors 'silent)
+(setq warning-suppress-log-types '((comp) (bytecomp)))
 
 ;; 垃圾回收优化 - 启动时增大阈值，后面恢复正常
 (setq gc-cons-threshold most-positive-fixnum)
